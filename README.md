@@ -18,16 +18,12 @@ Utilitaire Python pour ajouter une page blanche aux fichiers PDF ayant un nombre
 ./install.sh
 ```
 
-Cela va :
-1. Vérifier que `uv` est installé
-2. Installer les dépendances (`pypdf`)
-3. Installer le projet en mode développement
-4. Rendre la commande `pdf_even_pages` accessible globalement
+Cela va installer `pdf_even_pages` comme commande globale. Ensuite, vous pouvez l'utiliser de n'importe quel dossier !
 
 ### Installation manuelle
 
 ```bash
-uv pip install -e .
+uv tool install -e .
 ```
 
 ## Utilisation

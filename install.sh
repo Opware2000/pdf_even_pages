@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "📦 Installation de pdf_even_pages avec uv..."
+echo "📦 Installation de pdf_even_pages..."
 
 # Vérifier que uv est installé
 if ! command -v uv &> /dev/null; then
@@ -9,12 +9,14 @@ if ! command -v uv &> /dev/null; then
     exit 1
 fi
 
-# Installer le projet en mode développement
-echo "📥 Installation des dépendances..."
-uv pip install -e .
+# Installer le projet comme outil global avec uv
+echo "📥 Installation en tant qu'outil global..."
+uv tool install -e .
 
 # Vérifier l'installation
 echo "✅ Vérification..."
 pdf_even_pages --help
 
-echo "✨ Installation terminée ! Vous pouvez utiliser 'pdf_even_pages' de n'importe quel dossier."
+echo ""
+echo "✨ Installation terminée !"
+echo "Vous pouvez maintenant utiliser 'pdf_even_pages' de n'importe quel dossier !"
