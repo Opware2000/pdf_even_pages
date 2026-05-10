@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-even-pages"
+version = "1.0.0"
+description = "Ajoute une page blanche aux PDF avec nombre impair de pages"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "pypdf",
+]
+
+[project.scripts]
+pdf_even_pages = "pdf_even_pages:main"
+
+[project.urls]
+Homepage = "https://github.com/Opware2000/pdf_even_pages"
